@@ -1,14 +1,14 @@
 import './About.css'
 import profile_img from '../../assets/profile_img.jpeg'
-import java_logo from '../../assets/java_logo.png'
-import mysql_logo from '../../assets/mysql-5-logo-png-transparent.png'
-import git_logo from '../../assets/git-icon-logo-png-transparent.png'
-import css_logo from '../../assets/css logo.png'
-import html_logo from '../../assets/Html logo.png'
-import react_logo from '../../assets/react logo.png'
-import js_logo from '../../assets/js logo.png'
-import mongodb_logo from '../../assets/MongoDB.png'
-import springboot_logo from '../../assets/springboot_logo.png'
+import java_logo from '../../assets/logos/java_logo.png'
+import mysql_logo from '../../assets/logos/mysql-5-logo-png-transparent.png'
+import git_logo from '../../assets/logos/git-icon-logo-png-transparent.png'
+import css_logo from '../../assets/logos/css logo.png'
+import html_logo from '../../assets/logos/Html logo.png'
+import react_logo from '../../assets/logos/react logo.png'
+import js_logo from '../../assets/logos/js logo.png'
+import mongodb_logo from '../../assets/logos/MongoDB.png'
+import springboot_logo from '../../assets/logos/springboot_logo.png'
 
 const About = () => {
     return (

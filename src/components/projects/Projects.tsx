@@ -1,5 +1,5 @@
 import './Projects.css'
-import projects_data from '../../assets/projects_data'
+import projects_data from '../../assets/projects/projects_data.tsx'
 
 const Projects = () => {
     return (
