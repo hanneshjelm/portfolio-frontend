@@ -37,8 +37,10 @@
     color: inherit;
 }
 
-.nav-menu a:hover {
-    color: #395E33FF;
+@media (hover: hover) and (pointer: fine) {
+    .nav-menu a:hover {
+        color: #395E33FF;
+    }
 }
 
 .nav-item.active a {
