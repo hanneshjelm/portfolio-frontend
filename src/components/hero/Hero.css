@@ -1,0 +1,58 @@
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8rem;
+    padding-top: 15rem;
+    animation: fadeIn 4s;
+}
+
+.hero h1 {
+    text-align: center;
+    width: 70%;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.hero h1 span {
+    color: #395E33;
+}
+
+.hero-body {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10rem;
+}
+
+.hero-resume-button {
+    display: inline-block;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    padding: 0.25rem 1rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    font-weight: 600;
+    background: linear-gradient(90deg, #395E33, #6FCF61);
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: 0 100%;
+    transition: background-size 0.3s, background-position 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.hero-resume-button:hover {
+    background-size: 100% 100%;
+}
+
+.hero-resume-button:visited {
+    color: white;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
