@@ -41,7 +41,7 @@
     color: #395E33FF;
 }
 
-.nav-menu a.active {
+.nav-item.active a {
     color: #395E33FF;
 }
 

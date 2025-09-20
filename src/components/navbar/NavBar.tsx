@@ -11,18 +11,20 @@ const NavBar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ["contact", "projects", "about", "home"];
+            const sections = ["home", "about", "projects", "contact"];
+            let currentSection = "home";
 
-            for (const sectionID of sections) {
+            sections.forEach(sectionID => {
                 const element = document.getElementById(sectionID);
                 if (element) {
                     const rect = element.getBoundingClientRect();
-                    if (rect.top <= 350) {
-                        setMenu(sectionID)
-                        break;
+                    if (rect.top <= 350)
+                    {
+                        currentSection = sectionID;
                     }
                 }
-            }
+            });
+            setMenu(currentSection);
         };
         window.addEventListener("scroll", handleScroll);
         handleScroll();
