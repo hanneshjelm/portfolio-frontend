@@ -1,15 +1,25 @@
 import './NavBar.css'
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 
 const NavBar = () => {
 
     const [menu, setMenu] = useState("home")
+    const isManualClick = useRef(false);
     const handleMenuClick = (menuItem: string) => {
         setMenu(menuItem);
+
+        isManualClick.current = true;
+
+        setTimeout(() => {
+            isManualClick.current = false;
+        }, 1000)
     }
 
+
     useEffect(() => {
+        if (isManualClick.current) return;
+
         const handleScroll = () => {
             const sections = ["home", "about", "projects", "contact"];
             let currentSection = "home";
