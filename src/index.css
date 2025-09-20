@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    color: white;
+    font-family: 'outfit', sans-serif;
+    padding-top: 6.25rem;
+    background: #161513 url("/background_image.png");
+}
+
+html {
+    scroll-padding-top: 4rem;
+}
+
+header h2 {
+    font-size: 5rem;
+    font-weight: 600;
+    padding: 0 2rem;
+    background: linear-gradient(90deg, #395E33, #6FCF61);
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: 0 88%;
+}
