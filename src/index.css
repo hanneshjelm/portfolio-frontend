@@ -18,6 +18,7 @@ html {
 header h2 {
     font-size: 5rem;
     font-weight: 600;
+    position: relative;
     padding: 0 2rem;
     background: linear-gradient(90deg, #395E33, #6FCF61);
     background-repeat: no-repeat;

@@ -1,0 +1,52 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin: 5rem 10rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.project-item {
+    position: relative;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.projects-container img {
+    box-sizing: border-box;
+    width: 26rem;
+    height: 17rem;
+    cursor: pointer;
+    border-radius: 2.5%;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    border-radius: 0.6rem;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+

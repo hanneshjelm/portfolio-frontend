@@ -15,7 +15,7 @@ const Projects = () => {
                                 <div className="project-overlay">
                                     <div className="project-info">
                                         <h3>{item.name}</h3>
-                                        <p>{item.description}</p>
+                                        <p>{item.description}</p> <br/>
                                         <span className="view-project">View Project →</span>
                                     </div>
                                 </div>
