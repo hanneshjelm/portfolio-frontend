@@ -1,0 +1,33 @@
+.footer {
+    margin: 3rem 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-top a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.footer-top a:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding-bottom: 3rem;
+}
