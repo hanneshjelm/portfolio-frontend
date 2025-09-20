@@ -93,3 +93,73 @@
     transform: scale(1.1);
     transition: 0.3s ease
 }
+
+@media (max-width: 768px) {
+    .About {
+        gap: 3rem;
+        margin: 3rem 1rem;
+    }
+
+    .about-sections {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .about-left {
+        justify-self: center;
+    }
+
+    .about-left img {
+        max-width: 20rem;
+    }
+
+    .about-right {
+        font-size: 1.2rem;
+    }
+
+    .about-skills {
+        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+        gap: 1rem;
+    }
+
+    .about-skills img {
+        height: 4rem;
+    }
+
+    .about-achievement h2 {
+        font-size: 3rem;
+    }
+
+    .about-achievement p {
+        font-size: 1rem;
+    }
+
+    .about-achievement hr {
+        height: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-right {
+        font-size: 1rem;
+    }
+
+    .about-skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-achievements {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-achievement hr {
+        width: 80%;
+        height: 0.25rem;
+    }
+
+    .about-achievement h2 {
+        font-size: 2.5rem;
+    }
+}

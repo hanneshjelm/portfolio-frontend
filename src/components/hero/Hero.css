@@ -50,3 +50,34 @@
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
+
+@media (max-width: 768px) {
+    .hero {
+        gap: 4rem;
+        padding: 10rem 1rem 3rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero-body {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+    }
+    .hero-resume-button {
+        padding: 1rem 1.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero body {
+        font-size: 1rem;
+    }
+    .hero-resume-button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+}

@@ -49,4 +49,25 @@
     transition: opacity 0.3s;
 }
 
+@media (max-width: 768px) {
+    .projects {
+        gap: 3rem;
+        margin: 3rem 1rem;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .projects-container img {
+        height: 15rem;
+    }
+
+    .project-overlay {
+        opacity: 1;
+        background: rgba(35, 35, 35, 0.8);
+    }
+}
+
 
