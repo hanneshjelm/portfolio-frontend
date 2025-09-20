@@ -1,0 +1,95 @@
+.About {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin: 5rem 10rem;
+}
+
+.about-sections {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+}
+
+.about-left img {
+    width: 25rem;
+    border-radius: 3%;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.about-skills {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    gap: 1.25rem;
+}
+
+.about-skills img {
+    height: 5rem;
+    width: auto;
+    object-fit: contain;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.about-achievements {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+}
+
+.about-achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-achievement hr {
+    width: 0.25rem;
+    height: 6.25rem;
+    background-color: white;
+    border: none;
+    margin: 0;
+}
+
+.about-achievement h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #395E33 40%, #6FCF61 90%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.about-achievement p {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease
+}
+
+.about-achievement:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease
+}
