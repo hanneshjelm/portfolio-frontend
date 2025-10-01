@@ -36,7 +36,7 @@ const ParticleBackground = () => {
                         }
                     },
                     color: {
-                        value: ["#ffffff", "#ffffff", "#ffffff", "#6FCF61"]
+                        value: ["#ffffff", "#ffffff", "#ffffff", "#84ff70", "#6FCF61"]
                     },
                     shape: {
                         type: "circle",
