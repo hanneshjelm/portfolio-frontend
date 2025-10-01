@@ -8,7 +8,7 @@ body {
     color: white;
     font-family: 'outfit', sans-serif;
     padding-top: 6.25rem;
-    background: #161513 url("/background_image.png");
+    background: #161513;
 }
 
 html {

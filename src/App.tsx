@@ -5,10 +5,13 @@ import About from "./components/about/About.tsx";
 import Projects from "./components/projects/Projects.tsx";
 import Contact from "./components/contact/Contact.tsx";
 import Footer from "./components/footer/Footer.tsx";
+import ParticleBackground from "./components/AnimatedBackground/Particles.tsx"
 
 function App() {
   return (
-      <div>
+      <>
+          <ParticleBackground />
+          <div style={{ position: 'relative', zIndex: 1 }}>
           <NavBar/>
           <Hero/>
           <About/>
@@ -16,6 +19,8 @@ function App() {
           <Contact/>
           <Footer/>
       </div>
+      </>
+
   )
 }
 
