@@ -49,6 +49,11 @@
     transition: opacity 0.3s;
 }
 
+.project-item:hover {
+    transform: translateY(-8px);
+    transition: transform 0.3s;
+}
+
 @media (max-width: 768px) {
     .projects {
         gap: 3rem;

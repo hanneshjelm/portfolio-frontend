@@ -18,12 +18,12 @@ const About = () => {
                 <h2>About Me</h2>
             </header>
             <article className="about-sections">
-                <div className="about-left">
+                <div className="about-left scroll-reveal-left">
                     <img src={profile_img} alt="profile_image" />
                 </div>
-                <div className="about-right">
+                <div className="about-right scroll-reveal-right">
                     <p className="about-paragraph">
-                        I am a Java Developer currently studying at Nackademin, where I’m gaining hands-on
+                        I am a Java Developer currently studying at Nackademin, where I'm gaining hands-on
                         experience in modern software development. My focus areas include Java, object-oriented
                         programming, backend development with Spring Boot, REST APIs, Hibernate, and Thymeleaf,
                         as well as frontend fundamentals (HTML, CSS, JavaScript). I have also worked with databases
@@ -39,65 +39,48 @@ const About = () => {
                 </div>
 
                 <div className="about-skills">
-                    <div className="skill-item skill-item-one">
+                    <div className="skill-item scroll-reveal-scale scroll-reveal-delay-1">
                         <img src={java_logo} alt="java logo"/>
                         <p>Java</p>
                     </div>
-                    <div className="skill-item skill-item-two">
-                        <img src={springboot_logo} alt="html logo"/>
+                    <div className="skill-item scroll-reveal-scale scroll-reveal-delay-2">
+                        <img src={springboot_logo} alt="spring boot logo"/>
                         <p>Spring Boot</p>
                     </div>
-                    <div className="skill-item skill-item-three">
+                    <div className="skill-item scroll-reveal-scale scroll-reveal-delay-3">
                         <img src={mysql_logo} alt="mysql logo"/>
                         <p>MySQL</p>
                     </div>
-                    <div className="skill-item skill-item-four">
+                    <div className="skill-item scroll-reveal-scale scroll-reveal-delay-4">
                         <img src={git_logo} alt="git logo"/>
                         <p>Git</p>
                     </div>
-                    <div className="skill-item skill-item-five">
+                    <div className="skill-item scroll-reveal-scale scroll-reveal-delay-1">
                         <img src={css_logo} alt="css logo"/>
                         <p>CSS</p>
                     </div>
-                    <div className="skill-item skill-item-six">
+                    <div className="skill-item scroll-reveal-scale scroll-reveal-delay-2">
                         <img src={react_logo} alt="React logo"/>
                         <p>React</p>
                     </div>
-                    <div className="skill-item skill-item-seven">
+                    <div className="skill-item scroll-reveal-scale scroll-reveal-delay-3">
                         <img src={html_logo} alt="html logo"/>
                         <p>HTML</p>
                     </div>
-                    <div className="skill-item skill-item-eight">
-                        <img src={js_logo} alt="html logo"/>
+                    <div className="skill-item scroll-reveal-scale scroll-reveal-delay-4">
+                        <img src={js_logo} alt="javascript logo"/>
                         <p>JavaScript</p>
                     </div>
-                    <div className="skill-item skill-item-nine">
-                        <img src={mongodb_logo} alt="html logo"/>
+                    <div className="skill-item scroll-reveal-scale scroll-reveal-delay-1">
+                        <img src={mongodb_logo} alt="mongodb logo"/>
                         <p>MongoDB</p>
                     </div>
-                    <div className="skill-item skill-item-nine">
-                        <img src={postgres_logo} alt="html logo"/>
+                    <div className="skill-item scroll-reveal-scale scroll-reveal-delay-2">
+                        <img src={postgres_logo} alt="postgresql logo"/>
                         <p>PostgreSQL</p>
                     </div>
                 </div>
-
             </article>
-            {/*<div className="about-achievements">*/}
-            {/*    <div className="about-achievement">*/}
-            {/*        <h2>2+</h2>*/}
-            {/*        <p>YEARS OF EXPERIENCE</p>*/}
-            {/*    </div>*/}
-            {/*    <hr/>*/}
-            {/*    <div className="about-achievement">*/}
-            {/*        <h2>15+</h2>*/}
-            {/*        <p>PROJECTS COMPLETED</p>*/}
-            {/*    </div>*/}
-            {/*    <hr/>*/}
-            {/*    <div className="about-achievement">*/}
-            {/*        <h2>10+</h2>*/}
-            {/*        <p>TECHNOLOGIES LEARNED</p>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
         </section>
     )
 }

@@ -5,7 +5,7 @@ const Projects = () => {
     return (
         <section id="projects" className="projects">
             <header className="projects-title">
-                <h2>My Projects</h2>
+                <h2 className= "reverse">My Projects</h2>
             </header>
             <div className="projects-container">
                 {projects_data.map((item, index) => {

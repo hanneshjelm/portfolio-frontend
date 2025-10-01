@@ -1,31 +1,43 @@
-import './NavBar.css'
-import {useEffect, useState} from "react";
+import './NavBar.css';
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
-    const [menu, setMenu] = useState("home")
+    const [menu, setMenu] = useState("home");
 
     useEffect(() => {
-        const handleScroll = () => {
-            const sections = ["home", "about", "projects", "contact"];
-            let currentSection = "home";
+        const sectionIDs = ["home", "about", "projects", "contact"];
 
-            sections.forEach(sectionID => {
-                const element = document.getElementById(sectionID);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    if (rect.top <= 200) {
-                        currentSection = sectionID;
-                    }
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && sectionIDs.includes(entry.target.id)) {
+                    setMenu(entry.target.id);
+                }
+
+                if (
+                    entry.isIntersecting &&
+                    entry.target.matches(
+                        ".scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale, header h2"
+                    )
+                ) {
+                    entry.target.classList.add("revealed");
+                    observer.unobserve(entry.target);
                 }
             });
+        }, { threshold: 0.6 });
 
-            setMenu(currentSection);
-        };
+        sectionIDs.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) observer.observe(element);
+        });
 
-        window.addEventListener("scroll", handleScroll);
-        handleScroll();
-        return () => window.removeEventListener("scroll", handleScroll);
+        const revealElements = document.querySelectorAll(
+            ".scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale, header h2"
+        );
+        revealElements.forEach(element => observer.observe(element));
+
+        return () => observer.disconnect();
     }, []);
+
 
     return (
         <nav className="navbar">
@@ -33,22 +45,18 @@ const NavBar = () => {
                 <li className={menu === "home" ? "nav-item active" : "nav-item"}>
                     <a href="#home">Home</a>
                 </li>
-
                 <li className={menu === "about" ? "nav-item active" : "nav-item"}>
                     <a href="#about">About</a>
                 </li>
-
                 <li className={menu === "projects" ? "nav-item active" : "nav-item"}>
                     <a href="#projects">Projects</a>
                 </li>
-
                 <li className={menu === "contact" ? "nav-item active" : "nav-item"}>
                     <a href="#contact">Contact</a>
                 </li>
-
             </ul>
         </nav>
-    )
-}
+    );
+};
 
 export default NavBar;
