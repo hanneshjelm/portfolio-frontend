@@ -9,6 +9,7 @@ import react_logo from '../../assets/logos/react logo.png'
 import js_logo from '../../assets/logos/js logo.png'
 import mongodb_logo from '../../assets/logos/MongoDB.png'
 import springboot_logo from '../../assets/logos/springboot_logo.png'
+import postgres_logo from '../../assets/logos/postgres_logo.png'
 
 const About = () => {
     return (
@@ -30,11 +31,10 @@ const About = () => {
                         software design patterns.
                     </p>
                     <p className="about-paragraph">
-                        Before studying I've had experience with
-                        running a company and working in industrial production, which taught me the value of
-                        responsibility, communication, and structured problem-solving. These experiences, combined
-                        with my technical training, give me a unique ability to approach challenges from both a
-                        practical and technical perspective.
+                        Alongside my studies, I have gained experience running my own company and working in
+                        industrial production, which has strengthened my skills in responsibility, communication,
+                        and structured problem-solving. Combined with my technical training, these experiences give
+                        me a balanced perspective, allowing me to approach challenges both practically and technically.
                     </p>
                 </div>
 
@@ -75,25 +75,29 @@ const About = () => {
                         <img src={mongodb_logo} alt="html logo"/>
                         <p>MongoDB</p>
                     </div>
+                    <div className="skill-item skill-item-nine">
+                        <img src={postgres_logo} alt="html logo"/>
+                        <p>PostgreSQL</p>
+                    </div>
                 </div>
 
             </article>
-            <div className="about-achievements">
-                <div className="about-achievement">
-                    <h2>2+</h2>
-                    <p>YEARS OF EXPERIENCE</p>
-                </div>
-                <hr/>
-                <div className="about-achievement">
-                    <h2>15+</h2>
-                    <p>PROJECTS COMPLETED</p>
-                </div>
-                <hr/>
-                <div className="about-achievement">
-                    <h2>10+</h2>
-                    <p>TECHNOLOGIES LEARNED</p>
-                </div>
-            </div>
+            {/*<div className="about-achievements">*/}
+            {/*    <div className="about-achievement">*/}
+            {/*        <h2>2+</h2>*/}
+            {/*        <p>YEARS OF EXPERIENCE</p>*/}
+            {/*    </div>*/}
+            {/*    <hr/>*/}
+            {/*    <div className="about-achievement">*/}
+            {/*        <h2>15+</h2>*/}
+            {/*        <p>PROJECTS COMPLETED</p>*/}
+            {/*    </div>*/}
+            {/*    <hr/>*/}
+            {/*    <div className="about-achievement">*/}
+            {/*        <h2>10+</h2>*/}
+            {/*        <p>TECHNOLOGIES LEARNED</p>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
         </section>
     )
 }
