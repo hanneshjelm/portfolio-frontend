@@ -10,7 +10,7 @@ const Contact = () => {
         setStatus("sending");
 
         try {
-            const response = await fetch("http://localhost:8081/contact/send-email", {
+            const response = await fetch("https://portfolio-backend-0jko.onrender.com/contact/send-email", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
