@@ -9,9 +9,8 @@ const Hero = () => {
                 <a
                     href={resume}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener"
                     className="hero-resume-button"
-                    download="Hannes_Hjelm_CV.pdf"
                 >
                     My Resume
                 </a>
