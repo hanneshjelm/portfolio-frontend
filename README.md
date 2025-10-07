@@ -1,69 +1,64 @@
-# React + TypeScript + Vite
+# Portfolio Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend for my personal portfolio [website](https://hanneshjelm.se/). A modern, responsive single-page application showcasing my projects, skills, and professional experience.
 
-Currently, two official plugins are available:
+##  Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- TypeScript
+- CSS
+- Vite
 
-## Expanding the ESLint configuration
+##  Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Responsive design for all devices
+- Smooth scroll navigation with active section highlighting
+- Scroll-reveal animations
+- Contact form with backend integration
+- Project showcase with hover effects
+- Skills display with technology logos
+- Downloadable resume
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+##  Setup
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Clone the repository**
+   
+   ```bash
+   git clone https://github.com/hanneshjelm/portfolio-frontend.git
+   cd portfolio-frontend
+   ```
+
+2. **Install dependencies**
+   
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   
+   ```bash
+   npm run build
+   ```
+
+##  Backend Integration
+
+The contact form integrates with the [portfolio-backend](https://github.com/hanneshjelm/portfolio-backend) service:
+
+```typescript
+fetch("${BACKEND_URL}/contact/send-email", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(formData)
+})
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+##  Contact
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+For questions or feedback, reach out via my portfolio [website](https://hanneshjelm.se/).
