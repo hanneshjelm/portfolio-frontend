@@ -35,10 +35,10 @@ const ParticleBackground = () => {
                 fpsLimit: 60,
                 particles: {
                     number: {
-                        value: 66,
+                        value: 30,
                         density: {
                             enable: true,
-                            area: 315
+                            width: 315
                         }
                     },
                     color: {
@@ -68,12 +68,11 @@ const ParticleBackground = () => {
                     },
                     move: {
                         enable: true,
-                        speed: 0.5,
+                        speed: 0.3,
                         direction: "none",
                         random: true,
                         straight: false,
-                        outModes: "out",
-                        bounce: false
+                        outModes: "out"
                     }
                 },
                 interactivity: {
