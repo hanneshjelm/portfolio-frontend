@@ -1,21 +1,27 @@
-import Particles from "react-tsparticles";
-import type { Container, Engine } from "tsparticles-engine";
-import { loadSlim } from "tsparticles-slim";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import type { Container } from "@tsparticles/engine";
+import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useState } from "react";
 
 const ParticleBackground = () => {
-    const particlesInit = async (engine: Engine) => {
-        await loadSlim(engine);
-    };
+    const [init, setInit] = useState(false);
+
+    useEffect(() => {
+        initParticlesEngine(async (engine) => {
+            await loadSlim(engine);
+        }).then(() => setInit(true));
+    }, []);
 
     const particlesLoaded = async (container?: Container) => {
         console.log("Particles loaded!", container);
     };
 
+    if (!init) return null;
+
     return (
         <Particles
             id="tsparticles"
-            init={particlesInit}
-            loaded={particlesLoaded}
+            particlesLoaded={particlesLoaded}
             style={{
                 position: "fixed",
                 top: 0,
@@ -29,101 +35,59 @@ const ParticleBackground = () => {
                 fpsLimit: 60,
                 particles: {
                     number: {
-                        value: 30,
+                        value: 66,
                         density: {
                             enable: true,
-                            value_area: 315
+                            area: 315
                         }
                     },
                     color: {
                         value: ["#ffffff", "#ffffff", "#ffffff", "#84ff70", "#6FCF61"]
                     },
                     shape: {
-                        type: "circle",
-                        stroke: {
-                            width: 0,
-                            color: "#000000"
-                        }
+                        type: "circle"
                     },
                     opacity: {
-                        value: 0.5,
-                        random: true,
-                        anim: {
+                        value: { min: 0.2, max: 0.5 },
+                        animation: {
                             enable: true,
                             speed: 0.1,
-                            opacity_min: 0.2,
                             sync: false
                         }
                     },
                     size: {
-                        value: 3,
-                        random: true,
-                        anim: {
+                        value: { min: 0.1, max: 3 },
+                        animation: {
                             enable: true,
                             speed: 1,
-                            size_min: 0.1,
                             sync: false
                         }
                     },
-                    line_linked: {
-                        enable: false,
-                        distance: 150,
-                        color: "#ffffff",
-                        opacity: 0.4,
-                        width: 1
+                    links: {
+                        enable: false
                     },
                     move: {
                         enable: true,
-                        speed: 0.3,
+                        speed: 0.5,
                         direction: "none",
                         random: true,
                         straight: false,
-                        out_mode: "out",
-                        bounce: false,
-                        attract: {
-                            enable: false,
-                            rotateX: 600,
-                            rotateY: 1200
-                        }
+                        outModes: "out",
+                        bounce: false
                     }
                 },
                 interactivity: {
-                    detect_on: "canvas",
+                    detectsOn: "canvas",
                     events: {
-                        onhover: {
+                        onHover: {
                             enable: false,
                             mode: "repulse"
                         },
-                        onclick: {
+                        onClick: {
                             enable: false,
                             mode: "push"
                         },
-                        resize: true
-                    },
-                    modes: {
-                        grab: {
-                            distance: 400,
-                            line_linked: {
-                                opacity: 1
-                            }
-                        },
-                        bubble: {
-                            distance: 400,
-                            size: 40,
-                            duration: 2,
-                            opacity: 8,
-                            speed: 3
-                        },
-                        repulse: {
-                            distance: 200,
-                            duration: 0.4
-                        },
-                        push: {
-                            particles_nb: 4
-                        },
-                        remove: {
-                            particles_nb: 2
-                        }
+                        resize: { enable: true }
                     }
                 },
                 retina_detect: true
