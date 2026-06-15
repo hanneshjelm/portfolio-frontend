@@ -2,7 +2,7 @@ import hotel_booking from './Hotel booking.png'
 import quiz from './QuizCollage.png'
 import memeory from './Memeory.png'
 import secure_login from './Secure login.png'
-import webstore_admin from './webstore login.png'
+import uniform from './Uniform order system.png'
 import webstore from './webstore1.png'
 
 
@@ -14,11 +14,10 @@ import webstore from './webstore1.png'
 const projects_data = [
     {
         number: 1,
-        name: 'Hotel Booking System',
-        img: hotel_booking,
-        url: "https://github.com/hanneshjelm/Backend1",
-        description: "A simple hotel booking system with room and customer management. " +
-            "Made with Spring Boot and Thymeleaf with MySQL database"
+        name: 'Uniform Order System',
+        img: uniform,
+        url: "https://github.com/hanneshjelm/uniform-order-system-frontend",
+        description: "A fullstack order system built with Spring Boot and React"
     },
     {
         number: 2,
@@ -39,11 +38,11 @@ const projects_data = [
     },
     {
         number: 4,
-        name: 'Webstore with admin',
-        img: webstore_admin,
-        url: "https://github.com/hanneshjelm/JavaBackend2",
-        description: "Webstore with admin dashboard for order management. " +
-            "Built with Spring Boot and Thymeleaf with Spring Security integration with MySQL database"
+        name: 'Hotel Booking System',
+        img: hotel_booking,
+        url: "https://github.com/hanneshjelm/Backend1",
+        description: "A simple hotel booking system with room and customer management. " +
+            "Made with Spring Boot and Thymeleaf with MySQL database"
     },
     {
         number: 5,
